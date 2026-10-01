@@ -1235,3 +1235,326 @@ body {
     transition-duration: 0.001ms !important;
   }
 }
+
+/* Mobile rescue: dedicated composition instead of shrinking the desktop poster. */
+@media (max-width: 760px) {
+  body {
+    background:
+      radial-gradient(circle at 50% 4%, rgba(255, 68, 174, 0.32), transparent 18rem),
+      linear-gradient(180deg, #0d050a 0%, #1d0014 58%, #080006 100%);
+  }
+
+  .site-header {
+    position: absolute;
+    top: 12px;
+    width: calc(100% - 20px);
+    grid-template-columns: minmax(0, 1fr) auto;
+    padding: 11px 12px 11px 18px;
+    border-color: rgba(255, 79, 175, 0.38);
+    border-radius: 26px;
+    background:
+      linear-gradient(180deg, rgba(42, 8, 29, 0.92), rgba(14, 8, 12, 0.92));
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.08),
+      0 20px 46px rgba(0, 0, 0, 0.38),
+      0 0 32px rgba(255, 47, 163, 0.12);
+  }
+
+  .header-actions {
+    gap: 0;
+  }
+
+  .lang-switch {
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  .lang-btn {
+    min-width: 45px;
+    padding: 9px 11px;
+    font-size: 0.82rem;
+  }
+
+  .wordmark {
+    font-size: clamp(1.45rem, 8vw, 2.12rem);
+    text-shadow:
+      0 1px 0 #ffd9ef,
+      0 3px 0 #f12593,
+      0 7px 0 #a10d5c,
+      0 13px 26px rgba(255, 48, 158, 0.52);
+  }
+
+  .hero {
+    display: block;
+    min-height: auto;
+    padding: 104px 12px 0;
+    background:
+      radial-gradient(circle at 78% 8%, rgba(255, 79, 175, 0.34), transparent 12rem),
+      #101010;
+  }
+
+  .hero::before {
+    inset: 96px 12px 48px;
+    border-radius: 30px;
+    background:
+      radial-gradient(circle at 86% 17%, rgba(255, 79, 175, 0.22), transparent 9rem),
+      radial-gradient(circle at 14% 78%, rgba(255, 79, 175, 0.16), transparent 10rem),
+      linear-gradient(145deg, #ffffff 0%, #fff5fb 46%, #ffe2f3 100%);
+    box-shadow:
+      0 0 0 1px rgba(255, 255, 255, 0.18),
+      0 28px 74px rgba(0, 0, 0, 0.55);
+  }
+
+  .hero::after {
+    height: 38%;
+    opacity: 0.34;
+  }
+
+  .hero-copy {
+    max-width: none;
+    padding: 28px 18px 0;
+  }
+
+  .hero-copy::after {
+    top: 90px;
+    right: 28px;
+    width: 9px;
+    height: 9px;
+    box-shadow:
+      34px 98px 0 7px #ff4faf,
+      -8px 362px 0 4px rgba(255, 79, 175, 0.8),
+      252px 270px 0 9px rgba(255, 255, 255, 0.86);
+  }
+
+  .hero-brand-shadow {
+    display: none;
+  }
+
+  .hero .eyebrow {
+    min-height: 0;
+    margin: 0 0 20px;
+    padding: 13px 16px;
+    font-size: 0.72rem;
+    line-height: 1.35;
+  }
+
+  .hero h1 {
+    max-width: 330px;
+    font-size: clamp(2.45rem, 12vw, 3.75rem);
+    line-height: 0.88;
+  }
+
+  .bubble-title {
+    margin: 6px 0 14px;
+    font-size: clamp(3.8rem, 19vw, 5.7rem);
+    line-height: 0.78;
+    text-shadow:
+      0 2px 0 #ffc1e5,
+      0 6px 0 #f82193,
+      0 13px 0 #b70d67,
+      0 20px 26px rgba(50, 0, 29, 0.28),
+      -10px -11px 18px rgba(255, 255, 255, 0.82);
+  }
+
+  .hero-subtitle {
+    max-width: 310px;
+    margin-top: 18px;
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .hero-price {
+    width: min(100%, 270px);
+    margin-top: 22px;
+    padding: 12px 14px;
+    gap: 7px;
+    border-radius: 22px;
+    background: rgba(255, 255, 255, 0.88);
+  }
+
+  .hero-price strong {
+    font-size: 2.55rem;
+  }
+
+  .hero-actions {
+    max-width: 330px;
+    margin-top: 18px;
+    gap: 10px;
+  }
+
+  .primary-cta,
+  .ghost-cta {
+    min-height: 50px;
+    font-size: 0.96rem;
+  }
+
+  .hero-visual {
+    min-height: 488px;
+    margin-top: -12px;
+  }
+
+  .character-frame {
+    min-height: 488px;
+    overflow: hidden;
+    border-radius: 0 0 30px 30px;
+    background:
+      radial-gradient(circle at 42% 8%, rgba(255, 255, 255, 0.9), transparent 8rem),
+      linear-gradient(180deg, #fff 0%, #fff5fb 42%, #ffd8ef 100%);
+  }
+
+  .character-frame::before,
+  .character-frame::after {
+    display: block;
+  }
+
+  .character-frame::before {
+    width: 9px;
+    height: 9px;
+    top: 15%;
+    left: 12%;
+    box-shadow:
+      210px 42px 0 7px rgba(255, 79, 175, 0.9),
+      274px 288px 0 5px rgba(255, 255, 255, 0.9),
+      72px 344px 0 4px rgba(255, 79, 175, 0.78);
+  }
+
+  .character-frame::after {
+    display: none;
+  }
+
+  .character-photo {
+    inset: auto 0 -8px;
+    height: 486px;
+    background-size: auto 104%;
+    background-position: 50% 100%;
+    background-repeat: no-repeat;
+    transform: none;
+  }
+
+  .floating-pill {
+    min-height: 46px;
+    padding: 0 15px;
+    font-size: 0.88rem;
+    box-shadow: 0 14px 26px rgba(76, 0, 42, 0.16);
+  }
+
+  .pill-one {
+    top: 30%;
+    right: 14px;
+    transform: rotate(4deg);
+  }
+
+  .pill-two {
+    bottom: 8%;
+    left: 14px;
+    max-width: calc(100% - 28px);
+    transform: rotate(-4deg);
+  }
+
+  .chrome-star {
+    width: 60px;
+  }
+
+  .star-one {
+    top: 192px;
+    right: 20px;
+  }
+
+  .star-two {
+    right: 20%;
+    bottom: 92px;
+    width: 58px;
+  }
+
+  .ticker {
+    position: relative;
+    margin: 18px -12px 0;
+    font-size: clamp(1.45rem, 8vw, 2.35rem);
+    transform: rotate(-1deg);
+  }
+
+  .ticker span {
+    padding: 15px 18px;
+  }
+
+  .proof-strip div {
+    min-height: 78px;
+    justify-content: flex-start;
+    padding: 0 30px;
+  }
+
+  .scroll-story {
+    height: 420vh;
+  }
+
+  .sticky-scene {
+    min-height: 100svh;
+    padding: 58px 18px 86px;
+    gap: 20px;
+  }
+
+  .scene-wordmark {
+    top: 48px;
+    opacity: 0.16;
+  }
+
+  .scene-copy h2 {
+    font-size: clamp(3.9rem, 18vw, 5.7rem);
+    line-height: 0.86;
+  }
+
+  .scene-copy p:not(.eyebrow) {
+    margin-top: 18px;
+    font-size: 1rem;
+  }
+
+  .orbit {
+    min-height: 288px;
+  }
+
+  .orb {
+    width: 92px;
+    font-size: 0.68rem;
+  }
+
+  .orb-a {
+    top: 0;
+    left: 8%;
+  }
+
+  .orb-b {
+    top: 10%;
+    right: 2%;
+  }
+
+  .orb-c {
+    top: 40%;
+    left: 26%;
+  }
+
+  .orb-d {
+    right: 1%;
+    bottom: 16%;
+  }
+
+  .orb-e {
+    bottom: 6%;
+    left: 0;
+  }
+
+  .orb-f {
+    right: 30%;
+    bottom: 0;
+  }
+
+  .section-heading h2,
+  .visual-copy h2,
+  .pricing-panel h2 {
+    font-size: clamp(2.55rem, 12vw, 4.4rem);
+    line-height: 0.9;
+  }
+
+  .program-grid article {
+    min-height: 210px;
+  }
+}
